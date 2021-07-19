@@ -2,9 +2,6 @@
 
 /* global connection status variable */
 int alive = 1;
-/* para atrapar el '\n' */
-#define CLEAN_BUFFER {while(getchar() != '\n');}
-#define inIpRange(NUM) (((NUM) >= 0 && (NUM) <= 255)? 1:0)
 /* crea el socket para conectarme al servidor */
 int setUpSocket(short port, unsigned int addr, SAIN * serverAddr);
 /* fancy looking console :)*/
@@ -24,7 +21,7 @@ int main (int argC, char * argV[]) {
         exit(1);
     }
     SAIN serverAddr;
-    int addr = inet_addr(argV[1]);
+    unsigned int addr = inet_addr(argV[1]);
     if (addr < 0) {
         perror("La ip provista es invalida");
         exit(1);

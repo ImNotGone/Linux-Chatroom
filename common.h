@@ -1,7 +1,3 @@
-//
-// Created by MrGonza on 5/27/2021.
-//
-
 #ifndef SERVER_COMMON_H
 #define SERVER_COMMON_H
 
@@ -21,7 +17,6 @@
 #define TCP 0 /* Protocolo TCP */
 #define SERVER_PORT 4545 /* puerto de acceso */
 #define LOCALIP INADDR_ANY /* ip local */
-#define IPV4_LEN 16
 #define MAXCLIENTSENDLINE 4096 /* maximo largo de informacion para enviar */
 #define ALIAS_LEN 32 /* max user alias len */
 #define MAXSERVERSENDLINE (MAXCLIENTSENDLINE + ALIAS_LEN + 8) /* el largo maximo de linea q manda el servidor */
