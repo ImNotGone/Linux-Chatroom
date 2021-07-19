@@ -22,6 +22,6 @@ void trim(char * str, int len) {
 }
 
 void printAddr(unsigned int addr) {
-    printf("%d.%d.%d.%d", addr & 0xff, addr & 0xff00 >> 8, addr & 0xff0000 >> 16, addr & 0xff000000 >> 24);
+    printf("%d.%d.%d.%d", 0xff & addr , 0xff & (addr >> 8), 0xff & (addr >> 16), 0xff & (addr >> 24));
 }
 
