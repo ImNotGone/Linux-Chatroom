@@ -1,7 +1,3 @@
-//
-// Created by MrGonza on 5/27/2021.
-//
-
 #include "common.h"
 
 int check4Err(int value, const char * msg) {

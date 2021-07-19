@@ -59,7 +59,6 @@ int main() {
             pthread_create(&threadId, NULL, &handleConnection, (void *) client);
         }
     }
-
 }
 
 int setUpServer(short port, int backlog) {
@@ -98,7 +97,7 @@ void rmFromArr(int clientId) {
     pthread_mutex_lock(&client_mutex);
     for (int i = 0, rm = 0; i < SERVER_BACKLOG && !rm; i++) {
         if(clients[i] != NULL && clients[i]->id == clientId) {
-            clients[i] == NULL;
+            clients[i] = NULL;
             rm = 1;
         }
     }
@@ -138,7 +137,6 @@ void * handleConnection(void * arg) {
                 printf("%s", SEND);
             }
         }
-
     }
     printf("[Closing %s's connection]\n", client->alias);
     connected--;
