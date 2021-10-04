@@ -1,8 +1,6 @@
 COMPILER 	= gcc
 FLAGS 		= -pedantic -std=c99 -Wall
 LINK_FLAGS 	= $(FLAGS) -pthread
-DEBUG 		= -g
-QUERIES 	= query1.csv query2.csv query3.csv
 
 all: client server
 
